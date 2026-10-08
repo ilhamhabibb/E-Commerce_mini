@@ -26,8 +26,8 @@ app.listen(PORT, () => {
 
 app.get('/api/products', (req, res) => {
     res.json([
-        { id: 1, name: 'Laptop Gaming Pro', price: 15000000, image: 'https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=300&q=80' },
-        { id: 2, name: 'Mouse Wireless', price: 250000, image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=300&q=80' },
-        { id: 3, name: 'Keyboard Mechanical', price: 850000, image: 'https://images.unsplash.com/photo-1595225476474-87563907a212?w=300&q=80' }
+        { id: 1, name: 'Laptop Gaming Pro', price: 15000000, image: 'https://via.placeholder.com/300x200/007bff/ffffff?text=Laptop+Gaming' },
+        { id: 2, name: 'Mouse Wireless', price: 250000, image: 'https://via.placeholder.com/300x200/28a745/ffffff?text=Mouse' },
+        { id: 3, name: 'Keyboard Mechanical', price: 850000, image: 'https://via.placeholder.com/300x200/dc3545/ffffff?text=Keyboard' }
     ]);
 });

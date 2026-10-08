@@ -8,5 +8,15 @@
 <body>
     <h1>Selamat Datang di E Commerce Mini</h1>
     <div id="app"></div>
+    <script>
+    fetch('/api/products')
+        .then(response => response.json())
+        .then(products => {
+            const appDiv = document.getElementById('app');
+            products.forEach(p => {
+                appDiv.innerHTML += `<p>${p.name} - Rp${p.price.toLocaleString('id-ID')}</p>`;
+            });
+        });
+</script>
 </body>
 </html>

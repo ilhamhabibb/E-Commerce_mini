@@ -15,6 +15,11 @@ app.post('/api/login', (req, res) => {
     }
 });
 
+app.post('/api/checkout', (req, res) => {
+    const { items } = req.body;
+    res.json({ message: 'Checkout sukses!', totalItems: items.length });
+});
+
 app.listen(PORT, () => {
     console.log(`Server berjalan di http://localhost:${PORT}`);
 });

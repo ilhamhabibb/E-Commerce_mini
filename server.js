@@ -18,3 +18,10 @@ app.post('/api/login', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server berjalan di http://localhost:${PORT}`);
 });
+
+app.get('/api/products', (req, res) => {
+    res.json([
+        { id: 1, name: 'Laptop Gaming', price: 15000000 },
+        { id: 2, name: 'Mouse Wireless', price: 250000 }
+    ]);
+});

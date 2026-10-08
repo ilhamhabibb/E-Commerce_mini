@@ -1,0 +1,28 @@
+name: Node.js CI Pipeline
+
+# 1. KAPAN pipeline ini berjalan?
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+# 2. APA yang dilakukan pipeline ini?
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # Server virtual dari GitHub
+
+    steps:
+    - name: Mengambil kode dari repository (Checkout)
+      uses: actions/checkout@v3
+
+    - name: Menyiapkan Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x' # Versi Node yang digunakan
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Jalankan Automated Test
+      run: npm test
